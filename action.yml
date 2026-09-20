@@ -52,7 +52,7 @@ runs:
     - name: Run Post-deployment script
       run: |
         ${{ github.action_path }}/PrePostDeploymentScript.ps1 `
-          -armTemplate "${{ inputs.armTemplateFile }}" `
+          -armTemplate "ARMTemplateForFactory.json" `
           -ResourceGroupName "${{ inputs.resourceGroupName }}" `
           -DataFactoryName '${{ inputs.dataFactoryName }}' `
           -predeployment $false `
